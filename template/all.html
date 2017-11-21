@@ -1,9 +1,11 @@
+<div ng-show="loader" class="loader-container"><div class="loader"></div></div>
 <div class="row">
-	<ul>
-		<li class="data-view" ng-repeat="data in result">
-			Name:{{data.title}}<br>
-			City:{{data.location_type}}<br>
-			<a href="#!kl/{{data.woeid}}">Detials</a>
-		</li>
-	</ul>
+	<h2>Weather App</h2>
+	<div class="list-group col-md-4" ng-repeat="data in result">
+		<ul class="list-group">
+			<li class="list-group-item"><span>Location Name:{{data.title}}</li>
+			<li class="list-group-item"><span>Location Type:{{data.location_type}}</li>
+			<li class="list-group-item"><a href="#!kl/{{data.woeid}}">Detials</a></li>
+		</ul>
+	</div>
 </div>

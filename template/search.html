@@ -1,5 +1,16 @@
+<div class="row">
+	<div class="col-md-4">
+		<form>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Search</label>
+				<input type="text" ng-model="search" class="form-control"   placeholder="Search Loaction" autocomplete="off">
+			</div>
+			<button ng-click="search_loct()" type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
 <div ng-show="loader" class="loader-container"><div class="loader"></div></div>
-<div ng-if="display" class="row">
+<div class="row" ng-if="display">
 	<h2>Weather:{{display.parent.title}}</h2>
 	<div class="main-weather">
 		<div class="col-md-6 list-group" ng-repeat="w in display.consolidated_weather">
