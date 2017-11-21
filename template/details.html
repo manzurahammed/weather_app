@@ -1,0 +1,13 @@
+<div class="row">
+	<h2>Weather:{{display.parent.title}}</h2>
+	<div class="main-weather">
+		<div class="col-md-6 list-group" ng-repeat="w in display.consolidated_weather">
+			<ul class="list-group">
+			  <li class="list-group-item"><span>Weather Name: {{w.weather_state_name}}</span> <img width="30" height="30" ng-src="https://www.metaweather.com/static/img/weather/png/{{w.weather_state_abbr}}.png"/></li>
+			  <li class="list-group-item"><span>Max temperature: {{w.max_temp|tplace}}&#8451;</span></li>
+			  <li class="list-group-item"><span>Min temperature: {{w.min_temp|tplace}}&#8451;</span></li>
+			  <li class="list-group-item"><span>The Temperature: {{w.the_temp|tplace}}&#8451;</span></li>
+			</ul>
+		</div>
+	</div>
+</div>

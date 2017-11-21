@@ -1,7 +1,9 @@
-<ul>
-	<li ng-repeat="data in result">
-		City:{{result.title}}<br>
-		Location:{{result.location_type}}<br>
-		Wid:{{result.woeid}}<br>
-	</li>
-</ul>
+<div class="row">
+	<ul>
+		<li class="data-view" ng-repeat="data in result">
+			Name:{{data.title}}<br>
+			City:{{data.location_type}}<br>
+			<a href="#!kl/{{data.woeid}}">Detials</a>
+		</li>
+	</ul>
+</div>
